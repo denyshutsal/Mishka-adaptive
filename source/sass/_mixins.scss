@@ -1,0 +1,116 @@
+@import 'variables';
+
+//----------------------------------------------
+
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin clear-link {
+  overflow: hidden;
+  text-decoration: none;
+}
+
+//Mixins from https://medium.com/@justinbrazeau/10-useful-sass-mixins-for-automation-833cdee9d69b
+
+//centering
+//----------------------------------------------
+
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+//media queries
+//----------------------------------------------
+
+@mixin screen($size) {
+  @if $size == 'sm' {
+    @media (min-width: $sm) {
+      @content;
+    }
+  }
+  @else if $size == 'md' {
+    @media (min-width: $md) {
+      @content;
+    }
+  }
+  @else if $size == 'lg' {
+    @media (min-width: $lg) {
+      @content;
+    }
+  }
+  @else if $size == 'xl' {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+}
+
+//rem converter
+//----------------------------------------------
+
+//@function calculateRem($size) {
+//  $remSize: $size / 16px;
+//  @return $remSize * 1rem;
+//}
+//
+//@mixin font-size($size) {
+//  font-size: $size;
+//  font-size: calculateRem($size);
+//}
+
+//animation
+//----------------------------------------------
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  animation: #{$str};
+}
+
+//retina images
+//---------------------------------------------
+
+@mixin retina($image) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url($image);
+  }
+}

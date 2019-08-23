@@ -1,0 +1,17 @@
+// sanitize.css (https://github.com/csstools/sanitize.css)
+
+@import "../../node_modules/sanitize.css/sanitize";
+
+//-------------------------------------------------------
+// Project custom styles
+// Base
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "base";
+@import "typography";
+@import "grid";
+@import "buttons";
+
+// Blocs
+@import "blocks/site-header";
