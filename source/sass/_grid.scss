@@ -7,11 +7,6 @@ grid
 
 .container {
   width: auto;
-  padding: 0 30px;
-
-  @include screen(md) {
-    padding: 0 50px;
-  }
 
   @include screen(xl) {
     width: 1250px;

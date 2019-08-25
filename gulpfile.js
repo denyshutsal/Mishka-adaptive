@@ -60,7 +60,7 @@ function css () {
 // gulp js
 function js () {
   return src([
-    'source/js/all/script.js',
+    'source/js/all/mainNavToggler.js'
   ])
     .pipe(plumber())
     .pipe(sourcemaps.init())

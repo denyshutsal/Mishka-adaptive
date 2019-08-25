@@ -35,10 +35,6 @@ video {
   clear: both;
 }
 
-[tabindex="-1"]:focus {
-  outline: none;
-}
-
 /**
  * Add the correct display in IE 10-.
  */
@@ -97,6 +93,10 @@ video {
 [aria-disabled="true"],
 [disabled] {
   cursor: not-allowed;
+}
+
+[tabindex="-1"]:focus {
+  outline: none;
 }
 
 /*
