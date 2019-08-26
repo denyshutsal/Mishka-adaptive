@@ -107,7 +107,7 @@ function images () {
 // number }
 function webp () {
   return src('source/img/*.{jpg,png}')
-    .pipe(gulpwebp({ quality: 90 }))
+    .pipe(gulpwebp({ quality: 100 }))
     .pipe(dest('source/img/webp'));
 }
 
