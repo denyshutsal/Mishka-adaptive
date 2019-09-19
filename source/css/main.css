@@ -581,7 +581,7 @@ img {
 }
 
 video {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -684,9 +684,9 @@ grid
   width: auto;
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .container {
-    width: 1250px;
+    width: 1150px;
     margin: 0 auto;
   }
 }
@@ -869,7 +869,7 @@ site-header
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .main-nav__wrapper {
     max-width: 900px;
   }
@@ -902,6 +902,12 @@ hero
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .hero__container {
+    padding: 0 50px;
+  }
+}
+
 .hero__title {
   z-index: 200;
   position: absolute;
@@ -929,7 +935,13 @@ hero
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 992px) {
+  .hero__title {
+    top: 170px;
+  }
+}
+
+@media (min-width: 1150px) {
   .hero__title {
     margin-left: -330px;
     width: 660px;
@@ -941,12 +953,15 @@ hero
 .hero__img {
   z-index: 100;
   min-height: 300px;
+  max-width: 795px;
 }
 
 .hero__links-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: -50px;
+  z-index: 200;
 }
 
 @media (min-width: 768px) {
@@ -1017,6 +1032,23 @@ card
 ========================================================================== */
 .card {
   background-color: #fff;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .card::before {
+    content: '';
+    position: absolute;
+    z-index: 1000;
+    bottom: 100%;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-image: url("../img/svg/zigzag-fill-desktop.svg");
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
 }
 
 .card__container {
