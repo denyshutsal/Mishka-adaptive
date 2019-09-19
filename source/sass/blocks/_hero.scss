@@ -16,6 +16,10 @@ hero
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
+  @include screen(md) {
+    padding: 0 50px;
+  }
 }
 
 .hero__title {
@@ -42,6 +46,10 @@ hero
     line-height: 50px;
   }
 
+  @include screen(lg) {
+    top: 170px;
+  }
+
   @include screen(xl) {
     margin-left: -330px;
     width: 660px;
@@ -53,12 +61,15 @@ hero
 .hero__img {
   z-index: 100;
   min-height: 300px;
+  max-width: 795px;
 }
 
 .hero__links-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: -50px;
+  z-index: 200;
 
   @include screen(md) {
     flex-direction: row;
