@@ -6,20 +6,24 @@ hero
 ========================================================================== */
 
 .hero {
+  background-color: $background-color-3;
+}
+
+.hero__container {
   position: relative;
   z-index: 900;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-color: $background-color-3;
 }
 
-.hero-heading {
+.hero__title {
   z-index: 200;
   position: absolute;
   top: 80px;
   left: 50%;
+  margin: 0;
   margin-left: -125px;
   width: 250px;
   color: $color-6;
@@ -51,7 +55,7 @@ hero
   min-height: 300px;
 }
 
-.hero-links-container {
+.hero__links-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -84,8 +88,9 @@ hero
     height: 120px;
   }
 
-  &__text {
+  &__title {
     width: 120px;
+    margin: 0;
     color: $color-5;
     font-family: inherit;
     font-size: 20px;

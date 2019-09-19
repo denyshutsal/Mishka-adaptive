@@ -5,18 +5,11 @@
 site-header
 ========================================================================== */
 
-//custom variant of https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 .main-nav {
   position: relative;
   z-index: 1000;
   overflow: hidden;
   background-color: $background-color-base;
-  border-bottom: 1px solid $color-4;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
-}
-
-.logo {
-  border-top: 0;
 }
 
 .logo__img {
@@ -38,6 +31,14 @@ site-header
   border-top: 1px solid $color-4;
   transition: opacity 0.15s ease-out;
 
+  &:first-child {
+    border-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $color-4;
+  }
+
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -45,6 +46,12 @@ site-header
 
   &:active {
     opacity: 0.3;
+  }
+
+  @include screen(lg) {
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 }
 
@@ -107,12 +114,7 @@ site-header
     align-items: center;
   }
 
-  .nav-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
+  .main-nav__wrapper {
     max-width: 750px;
   }
 
@@ -139,7 +141,7 @@ site-header
 }
 
 @include screen(xl) {
-  .nav-wrapper {
+  .main-nav__wrapper {
     max-width: 900px;
   }
 

@@ -5,7 +5,10 @@
       "ignoreAtRules": [
         "extends",
         "ignores",
-        "include"
+        "include",
+        "mixin",
+        "if",
+        "else"
       ]
     }]
   }

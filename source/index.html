@@ -143,7 +143,7 @@
   <!--end SVG sprite-->
 
   <header class="main-header">
-    <div class="container">
+    <div class="container main-header__container">
       <nav id="mainNav" class="main-nav">
         <a href="index.html" class="logo main-nav__link active">
           <picture>
@@ -153,7 +153,7 @@
                  width="86" height="35" alt="На главную">
           </picture>
         </a>
-        <div class="nav-wrapper clearfix">
+        <div class="main-nav__wrapper clearfix">
           <a id="mainNavToggler" class="toggler main-nav__link"></a>
           <a href="#" class="main-nav__link">Каталог товаров</a>
           <a href="#" class="main-nav__link">Вязание на заказ</a>
@@ -171,34 +171,80 @@
   </header>
   <!--  /.main-header-->
 
-  <div class="hero-wrapper">
-    <div class="container">
-      <section class="hero">
-        <img class="hero__img" src="img/hero.jpg" srcset="img/hero@2x.jpg 2x" alt="Картинка с вязанными игрушками">
-        <h1 class="hero-heading">Милые штуки ручной <br> работы для дома</h1>
-        <div class="hero-links-container">
-          <a href="#" class="btn hero-link hero-link--1">
-            <span class="hero-link__text">Предметы интерьера</span>
-            <span class="hero-link__icon">
-              <svg class="icon icon--lamp" width="40" height="62" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="#icon-lamp"></use>
-              </svg>
-            </span>
-          </a>
-          <a href="#" class="btn hero-link hero-link--2">
-          <span class="hero-link__text">Детские игрушки</span>
+  <section class="hero">
+    <div class="container hero__container">
+      <img class="hero__img" src="/img/hero.jpg" srcset="img/hero@2x.jpg 2x" alt="Картинка с вязанными игрушками">
+      <h1 class="hero__title">Милые штуки ручной <br> работы для дома</h1>
+      <div class="hero__links-wrapper">
+        <a href="#" class="btn hero-link hero-link--1">
+          <h2 class="hero-link__title">Предметы интерьера</h2>
+          <span class="hero-link__icon">
+            <svg class="icon icon--lamp" width="40" height="62" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="#icon-lamp"></use>
+            </svg>
+          </span>
+        </a>
+        <a href="#" class="btn hero-link hero-link--2">
+          <h2 class="hero-link__title">Детские игрушки</h2>
           <span class="hero-link__icon">
             <svg class="icon icon--element" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="#icon-element"></use>
             </svg>
           </span>
         </a>
-        </div>
-      </section>
-      <!--  /.hero-->
+      </div>
     </div>
-  </div>
-  <!--  /.hero-wrapper-->
+  </section>
+  <!--  /.hero-->
+
+  <section class="card">
+    <div class="container card__container">
+      <div class="card__header">
+        <h3 class="card__title">Вязаные корзинки</h3>
+        <div class="card__meta">ТОВАР <br>НЕДЕЛИ</div>
+      </div>
+      <div class="card__info">
+        <p class="card__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="card__table">
+          <tbody>
+          <tr>
+            <td>Цвет:</td>
+            <td class="card__item-color">«Тиффани»/серый</td>
+          </tr>
+          <tr>
+            <td>Диаметр:</td>
+            <td class="card__item-diameter">25 см</td>
+          </tr>
+          <tr>
+            <td>Высота:</td>
+            <td class="card__item-height">15 см</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card__img-wrapper">
+        <picture>
+          <source type="image/webp" media="(min-width: 1250px)"
+                  srcset="img/webp/triple-set-desktop.webp 1x, img/webp/triple-set-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/webp/triple-set-tablet.webp 1x, img/webp/triple-set-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/webp/triple-set-mobile.webp 1x, img/webp/triple-set-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1250px)"
+                  srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+                  srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+          <img class="card__img" src="img/triple-set-mobile.jpg"
+               srcset="img/triple-set-mobile@2x.jpg 2x" alt="triple set img">
+        </picture>
+      </div>
+      <div class="card__footer">
+        <p class="card__price">Цена: <span class="card__price-value">990 руб.</span></p>
+        <a href="#" class="btn btn--main card__link">ЗАКАЗАТЬ</a>
+      </div>
+    </div>
+  </section>
+  <!--  /.card-->
 
   <!--Scripts-->
   <!--jQuery-->
