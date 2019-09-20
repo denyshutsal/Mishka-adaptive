@@ -1,0 +1,108 @@
+@import '../variables';
+@import '../mixins';
+
+/* ==========================================================================
+basket-modal
+========================================================================== */
+
+.basket-modal {
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 25px 45px;
+  background-color: $background-color-base;
+  text-align: center;
+}
+
+.basket-modal__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: $color-2;
+  font-family: $font-family-base;
+  font-size: 25px;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+
+  @include line-height(25, 30);
+}
+
+.basket-modal__text {
+  margin: 0;
+  margin-bottom: 25px;
+  color: $color-base;
+  font-family: $font-family-base;
+  font-size: 15px;
+  font-weight: $font-weight-base;
+
+  @include line-height(15, 30);
+}
+
+.basket-modal__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.basket-modal__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.basket-modal__form label {
+  position: relative;
+  margin-right: 95px;
+  cursor: pointer;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.basket-modal__input + label::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 80px;
+  height: 50px;
+  background-color: $background-color-base;
+  border: 2px solid $background-color-6;
+  transition: 0.2s;
+}
+
+.basket-modal__input--1 + label::after {
+  content: 'S';
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.basket-modal__input--2 + label::after {
+  content: 'M';
+  position: absolute;
+  top: 6px;
+  left: 32px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.basket-modal__input--3 + label::after {
+  content: 'L';
+  position: absolute;
+  top: 6px;
+  left: 35px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.basket-modal__input:checked + label::before {
+  border: 2px solid $background-color-4;
+}
+
+.basket-modal__link {
+  width: 100%;
+  padding: 17px 0;
+  margin-top: 70px;
+}

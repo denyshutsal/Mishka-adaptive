@@ -91,6 +91,6 @@
 
 //line-height
 //---------------------------------------------
-@mixin line-height($line-height) {
-  line-height: ($line-height / $font-size-base);
+@mixin line-height($font-size, $line-height) {
+  line-height: ($line-height / $font-size);
 }

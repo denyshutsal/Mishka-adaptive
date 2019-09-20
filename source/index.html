@@ -247,6 +247,26 @@
   </section>
   <!--  /.card-->
 
+  <div class="basket-modal">
+    <h4 class="basket-modal__title">Добавить <br> в корзину</h4>
+    <p class="basket-modal__text">Выберите размер:</p>
+    <form class="basket-modal__form" action="http://foo.com" method="post">
+      <input type="checkbox" class="basket-modal__input basket-modal__input--1" id="basketModalInput1" name="s-size" checked>
+      <label for="basketModalInput1"><span class="sr-only">S size</span></label>
+
+      <input type="checkbox" class="basket-modal__input basket-modal__input--2" id="basketModalInput2" name="m-size">
+      <label for="basketModalInput2"><span class="sr-only">M size</span></label>
+
+      <input type="checkbox" class="basket-modal__input basket-modal__input--3" id="basketModalInput3" name="l-size">
+      <label for="basketModalInput3"><span class="sr-only">L size</span></label>
+
+      <button type="submit" class="btn btn--green basket-modal__link">Добавить</button>
+    </form>
+  </div>
+  <!--  /.basket-modal-->
+
+  <div class="overlay-modal"></div>
+
   <!--Scripts-->
   <!--jQuery-->
   <script src="vendor/jquery.slim.min.js"></script>

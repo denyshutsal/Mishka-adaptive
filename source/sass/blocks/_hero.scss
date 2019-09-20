@@ -33,17 +33,19 @@ hero
   color: $color-6;
   font-family: inherit;
   font-size: 27px;
-  font-weight: 700;
-  line-height: 30px;
+  font-weight: $font-weight-bold;
   font-style: inherit;
   text-align: center;
+
+  @include line-height(27, 30);
 
   @include screen(sm) {
     top: 130px;
     margin-left: -225px;
     width: 450px;
     font-size: 43px;
-    line-height: 50px;
+
+    @include line-height(43, 50);
   }
 
   @include screen(lg) {
@@ -54,7 +56,8 @@ hero
     margin-left: -330px;
     width: 660px;
     font-size: 53px;
-    line-height: 57px;
+
+    @include line-height(53, 57);
   }
 }
 
@@ -106,12 +109,13 @@ hero
     font-family: inherit;
     font-size: 20px;
     font-weight: 700;
-    line-height: 26px;
     font-style: inherit;
     text-align: left;
 
+    @include line-height(20, 26);
+
     @include screen(md) {
-      line-height: 30px;
+      @include line-height(20, 30);
     }
   }
 }
