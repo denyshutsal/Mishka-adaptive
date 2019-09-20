@@ -27,6 +27,7 @@ card
 }
 
 .card__container {
+  position: relative;
   padding: 20px 30px 35px;
   display: flex;
   flex-direction: column;
@@ -41,6 +42,10 @@ card
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @include screen(xl) {
+    padding: 70px 50px 50px 225px;
+  }
 }
 
 .card__header {
@@ -54,6 +59,15 @@ card
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @include screen(xl) {
+    position: absolute;
+    top: 45px;
+    left: 80px;
+    width: 1020px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
   }
 }
 
@@ -70,6 +84,12 @@ card
     font-size: 43px;
 
     @include line-height(50px);
+  }
+
+  @include screen(xl) {
+    font-size: 53px;
+
+    @include line-height(57px);
   }
 }
 
@@ -89,6 +109,10 @@ card
 
     @include line-height(17px);
   }
+
+  @include screen(xl) {
+    margin-right: 40px;
+  }
 }
 
 .card__info {
@@ -97,6 +121,12 @@ card
   @include screen(md) {
     width: 40%;
     margin-right: auto;
+  }
+
+  @include screen(xl) {
+    width: 285px;
+    margin-top: 150px;
+    margin-bottom: 110px;
   }
 }
 
@@ -108,6 +138,12 @@ card
   font-size: 15px;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
+
+  @include screen(xl) {
+    margin-bottom: 65px;
+    font-size: 17px;
+    @include line-height(30px);
+  }
 }
 
 .card__table {
@@ -137,6 +173,10 @@ card
     width: 50%;
     margin-bottom: 0;
   }
+
+  @include screen(xl) {
+    width: 525px;
+  }
 }
 
 .card__img {
@@ -147,6 +187,10 @@ card
     margin: 0;
     margin-left: auto;
   }
+
+  @include screen(xl) {
+    max-width: inherit;
+  }
 }
 
 .card__footer {
@@ -156,6 +200,10 @@ card
   @include screen(md) {
     width: 40%;
     margin-top: -100px;
+  }
+
+  @include screen(xl) {
+    width: 285px;
   }
 }
 
