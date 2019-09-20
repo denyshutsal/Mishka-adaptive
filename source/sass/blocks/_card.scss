@@ -142,6 +142,11 @@ card
 .card__img {
   max-width: 415px;
   margin: 0 auto;
+
+  @include screen(md) {
+    margin: 0;
+    margin-left: auto;
+  }
 }
 
 .card__footer {
