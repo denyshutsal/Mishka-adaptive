@@ -11,6 +11,13 @@ basket-modal
   padding: 30px 25px 45px;
   background-color: $background-color-base;
   text-align: center;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @include screen(md) {
+    width: 566px;
+    padding: 40px 105px 45px;
+  }
 }
 
 .basket-modal__title {
@@ -23,6 +30,16 @@ basket-modal
   text-transform: uppercase;
 
   @include line-height(25, 30);
+
+  @include screen(md) {
+    font-size: 30px;
+
+    @include line-height(30, 57);
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .basket-modal__text {
@@ -34,6 +51,10 @@ basket-modal
   font-weight: $font-weight-base;
 
   @include line-height(15, 30);
+
+  @include screen(md) {
+    font-size: 17px;
+  }
 }
 
 .basket-modal__form {
@@ -56,6 +77,10 @@ basket-modal
   &:last-of-type {
     margin-right: 0;
   }
+
+  @include screen(md) {
+    margin-right: 122px;
+  }
 }
 
 .basket-modal__input + label::before {
@@ -68,6 +93,10 @@ basket-modal
   background-color: $background-color-base;
   border: 2px solid $background-color-6;
   transition: 0.2s;
+
+  @include screen(md) {
+    width: 112px;
+  }
 }
 
 .basket-modal__input--1 + label::after {
@@ -77,6 +106,10 @@ basket-modal
   left: 36px;
   font-size: 18px;
   font-weight: 700;
+
+    @include screen(md) {
+    left: 52px;
+  }
 }
 
 .basket-modal__input--2 + label::after {
@@ -86,6 +119,10 @@ basket-modal
   left: 32px;
   font-size: 18px;
   font-weight: 700;
+
+    @include screen(md) {
+    left: 49px;
+  }
 }
 
 .basket-modal__input--3 + label::after {
@@ -95,6 +132,10 @@ basket-modal
   left: 35px;
   font-size: 18px;
   font-weight: 700;
+
+    @include screen(md) {
+    left: 51px;
+  }
 }
 
 .basket-modal__input:checked + label::before {
