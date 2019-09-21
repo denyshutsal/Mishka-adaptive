@@ -6,8 +6,13 @@ basket-modal
 ========================================================================== */
 
 .basket-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 5000;
   width: 320px;
-  margin: 0 auto;
+  margin-left: -160px;
   padding: 30px 25px 45px;
   background-color: $background-color-base;
   text-align: center;
@@ -16,8 +21,13 @@ basket-modal
 
   @include screen(md) {
     width: 566px;
+    margin-left: -283px;
     padding: 40px 105px 45px;
   }
+}
+
+.basket-modal--opened {
+  display: block;
 }
 
 .basket-modal__title {
@@ -140,10 +150,6 @@ basket-modal
 
 .basket-modal__input:checked + label::before {
   border: 2px solid $background-color-4;
-}
-
-.basket-modal__input:focus + label::before {
-  border: 2px solid $background-color-7;
 }
 
 .basket-modal__link {

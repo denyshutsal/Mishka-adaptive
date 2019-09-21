@@ -1,4 +1,4 @@
-// mainNavToggler (mainNavToggler.js)
+// main-nav-toggler (main-nav-toggler.js)
 // ----------------------------------------------------------------------
 
 'use strict';

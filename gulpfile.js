@@ -60,7 +60,8 @@ function css () {
 // gulp js
 function js () {
   return src([
-    'source/js/all/mainNavToggler.js'
+    'source/js/all/main-nav-toggler.js',
+    'source/js/all/basket-modal.js'
   ])
     .pipe(plumber())
     .pipe(sourcemaps.init())
