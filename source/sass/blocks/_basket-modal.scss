@@ -107,7 +107,7 @@ basket-modal
   font-size: 18px;
   font-weight: 700;
 
-    @include screen(md) {
+  @include screen(md) {
     left: 52px;
   }
 }
@@ -120,7 +120,7 @@ basket-modal
   font-size: 18px;
   font-weight: 700;
 
-    @include screen(md) {
+  @include screen(md) {
     left: 49px;
   }
 }
@@ -133,13 +133,17 @@ basket-modal
   font-size: 18px;
   font-weight: 700;
 
-    @include screen(md) {
+  @include screen(md) {
     left: 51px;
   }
 }
 
 .basket-modal__input:checked + label::before {
   border: 2px solid $background-color-4;
+}
+
+.basket-modal__input:focus + label::before {
+  border: 2px solid $background-color-7;
 }
 
 .basket-modal__link {
