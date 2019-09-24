@@ -61,7 +61,8 @@ function css () {
 function js () {
   return src([
     'source/js/all/main-nav-toggler.js',
-    'source/js/all/basket-modal.js'
+    'source/js/all/basket-modal.js',
+    'source/js/all/reviews-slider.js'
   ])
     .pipe(plumber())
     .pipe(sourcemaps.init())

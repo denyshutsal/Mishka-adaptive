@@ -39,7 +39,8 @@
     "semistandard": "^13.0.1",
     "snazzy": "^8.0.0",
     "stylelint": "^10.0.1",
-    "stylelint-config-standard": "^18.3.0"
+    "stylelint-config-standard": "^18.3.0",
+    "tiny-slider": "^2.9.2"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4"

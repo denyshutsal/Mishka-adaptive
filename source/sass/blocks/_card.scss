@@ -6,8 +6,9 @@ card
 ========================================================================== */
 
 .card {
-  background-color: $background-color-base;
   position: relative;
+  background-color: $background-color-base;
+  margin-bottom: 25px;
 
   @include screen(md) {
     &::before {
@@ -16,11 +17,11 @@ card
       z-index: 1000;
       bottom: 100%;
       left: 0;
-      height: 20px;
+      height: 60px;
       width: 100%;
       background-image: url('../img/svg/zigzag-fill-desktop.svg');
       background-size: 100%;
-      background-position: top center;
+      background-position: center;
       background-repeat: no-repeat;
     }
   }

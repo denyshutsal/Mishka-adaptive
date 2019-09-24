@@ -7,6 +7,10 @@ hero
 
 .hero {
   background-color: $background-color-3;
+
+  @include screen(md) {
+    margin-bottom: 25px;
+  }
 }
 
 .hero__container {
