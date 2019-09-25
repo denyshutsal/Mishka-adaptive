@@ -28,10 +28,27 @@ about-us
 
 .about-us__container {
   padding: 15px 30px 45px;
+
+  @include screen(md) {
+    padding: 40px 50px 140px;
+  }
 }
 
 .about-us__wrapper {
   margin-bottom: 60px;
+
+  @include screen(md) {
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    div {
+      width: 300px;
+    }
+  }
 }
 
 .about-us__title {
@@ -43,6 +60,13 @@ about-us
   font-weight: $font-weight-bold;
 
   @include line-height(25, 30);
+
+  @include screen(md) {
+    margin-bottom: 40px;
+    font-size: 43px;
+
+    @include line-height(43, 50);
+  }
 }
 
 .about-us__icon {
@@ -89,9 +113,42 @@ about-us
   font-weight: $font-weight-bold;
 
   @include line-height(17, 20);
+
+  @include screen(md) {
+    margin-bottom: 55px;
+    font-size: 20px;
+
+    @include line-height(20, 22);
+  }
+}
+
+.about-us__slider-wrapper {
+  @include screen(md) {
+    position: relative;
+    padding-top: 80px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 350px;
+      height: 457px;
+      top: 0;
+      left: -50px;
+      background-image: url('../img/review.jpg');
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: contain;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url('../img/review@2x.jpg');
+      }
+    }
+  }
 }
 
 .about-us__reviews-title {
+  position: relative;
   margin: 0;
   margin-bottom: 30px;
   color: $color-2;
@@ -100,6 +157,13 @@ about-us
   font-weight: $font-weight-bold;
 
   @include line-height(25, 30);
+
+  @include screen(md) {
+    margin-bottom: 50px;
+    font-size: 43px;
+
+    @include line-height(43, 50);
+  }
 }
 
 .reviews-slider__text {
@@ -110,10 +174,21 @@ about-us
   font-weight: $font-weight-base;
 
   @include line-height(15, 30);
+
+  @include screen(md) {
+    margin-bottom: 40px;
+    font-size: 17px;
+
+    @include line-height(17, 30);
+  }
 }
 
 .reviews-slider__author {
   margin-bottom: 35px;
+
+  @include screen(md) {
+    margin-bottom: 0;
+  }
 }
 
 .reviews-slider__author-name {
@@ -134,7 +209,6 @@ about-us
   cursor: pointer;
 
   @include line-height(17, 30);
-
   @include clear-link;
 }
 
@@ -145,6 +219,14 @@ about-us
   width: 260px;
   height: 50px;
   margin: 0 auto;
+
+  @include screen(md) {
+    position: relative;
+    width: 180px;
+    margin: 0;
+    margin-left: auto;
+    margin-top: -50px;
+  }
 
   button {
     padding: 0;
@@ -165,6 +247,20 @@ about-us
     &:last-child {
       background-image: url('../img/svg/icon-right-arrow.svg');
     }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @include screen(md) {
+      width: 90px;
+      border: 0;
+    }
   }
 }
 
@@ -174,4 +270,11 @@ about-us
   margin-top: 35px;
   width: 100%;
   padding: 13px 0;
+
+  @include screen(md) {
+    width: 175px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
 }
