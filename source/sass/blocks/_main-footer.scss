@@ -4,3 +4,119 @@
 /* ==========================================================================
 main-footer
 ========================================================================== */
+
+.main-footer {
+  color: $color-2;
+  background-color: $background-color-2;
+}
+
+.main-footer__container {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  a {
+    cursor: pointer;
+
+    @include clear-link;
+  }
+
+  svg {
+    color: $color-2;
+    transition: color 0.2s;
+
+    &:hover,
+    &:focus {
+      color: $color-3;
+    }
+
+    &:active {
+      color: $color-3;
+      opacity: 0.3;
+    }
+  }
+
+  @include screen(md) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 143px;
+  }
+}
+
+.main-footer__logo {
+  display: none;
+
+  @include screen(md) {
+    display: inline-block;
+  }
+}
+
+.icon--logo-mobile {
+  width: 102px;
+  height: 42px;
+}
+
+.main-footer__socials {
+  width: 100%;
+  padding: 25px 0;
+  border-bottom: 1px solid #e5e5e5;
+
+  @include screen(md) {
+    width: 235px;
+    border-bottom: 0;
+    padding: 0;
+    text-align: right;
+  }
+}
+
+.socials__link {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.icon--insta {
+  width: 22px;
+  height: 21px;
+}
+
+.icon--fb {
+  width: 15px;
+  height: 28px;
+}
+
+.icon--twitter {
+  width: 23px;
+  height: 20px;
+}
+
+.main-footer__site-author {
+  width: 100%;
+  padding: 25px 0;
+
+  @include screen(md) {
+    width: 190px;
+    padding: 0;
+  }
+}
+
+.site-author__text {
+  margin-right: 30px;
+  color: $color-2;
+  font-family: $font-family-base;
+  font-size: 19px;
+  font-weight: $font-weight-bold;
+
+  @include line-height(19, 18);
+}
+
+.icon--academy {
+  width: 27px;
+  height: 34px;
+}
