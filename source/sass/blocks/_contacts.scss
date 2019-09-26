@@ -1,0 +1,187 @@
+@import 'variables';
+@import 'mixins';
+
+/* ==========================================================================
+contacts
+========================================================================== */
+
+.contacts {
+  position: relative;
+  color: $color-base;
+  background-color: $background-color-base;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1000;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 38px;
+    width: 100%;
+    background-image: url('../img/svg/zigzag-fill-desktop-thin.svg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.contacts__container {
+  padding: 20px 30px 40px;
+
+  @include screen(md) {
+    padding: 40px 50px 40px;
+  }
+
+  @include screen(xl) {
+    position: relative;
+    padding: 60px 50px 90px 225px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.contacts__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 30px;
+  color: $color-2;
+  font-family: $font-family-base;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+
+  @include line-height(18, 30);
+
+  @include screen(md) {
+    margin-bottom: 50px;
+    font-size: 43px;
+
+    @include line-height(43, 50);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: 0;
+      width: 47px;
+      height: 81px;
+      background-image: url('../img/svg/icon-flag.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  @include screen(xl) {
+    font-size: 53px;
+    width: 310px;
+    order: 1;
+    margin-top: 70px;
+    margin-bottom: 0;
+
+    @include line-height(53, 57);
+
+    &::after {
+      left: -100px;
+    }
+  }
+}
+
+.contacts__wrapper {
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  color: $color-base;
+  font-family: $font-family-base;
+  font-size: 15px;
+  font-weight: $font-weight-base;
+  font-style: $font-style-base;
+
+  @include line-height(15, 30);
+
+  @include screen(sm) {
+    width: 100%;
+  }
+
+  @include screen(md) {
+    margin-bottom: 50px;
+    font-size: 17px;
+  }
+
+  @include screen(xl) {
+    width: 310px;
+    order: 3;
+    margin: 0;
+    margin-top: -290px;
+  }
+
+  a {
+    margin-left: 15px;
+    color: inherit;
+    cursor: pointer;
+    border-bottom: 1px solid $background-color-4;
+
+    @include clear-link;
+
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+
+    br:nth-child(2) {
+      @include screen(md) {
+        display: none;
+      }
+    }
+  }
+}
+
+.contacts__email {
+  margin-bottom: 20px;
+
+  @include screen(sm) {
+    margin-right: auto;
+  }
+}
+
+.contacts__address {
+  margin-right: 20px;
+}
+
+.contacts__map-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  @include screen(xl) {
+    position: inherit;
+    width: 525px;
+    height: 457px;
+    order: 2;
+  }
+}
+
+.contacts__btn {
+  width: 100%;
+  padding: 13px 0;
+  margin-top: 495px;
+
+  @include screen(md) {
+    display: block;
+    width: 230px;
+    margin: 0 auto;
+    margin-top: 550px;
+  }
+
+  @include screen(xl) {
+    position: absolute;
+    top: -80px;
+  }
+}

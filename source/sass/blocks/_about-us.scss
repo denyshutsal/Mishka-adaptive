@@ -27,14 +27,14 @@ about-us
 }
 
 .about-us__container {
-  padding: 15px 30px 45px;
+  padding: 15px 30px 60px;
 
   @include screen(md) {
-    padding: 40px 50px 140px;
+    padding: 40px 50px 160px;
   }
 
   @include screen(xl) {
-    padding: 60px 50px 140px 225px;
+    padding: 60px 50px 180px 225px;
   }
 }
 
