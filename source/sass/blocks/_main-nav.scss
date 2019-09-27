@@ -7,7 +7,7 @@ main-nav
 
 .main-nav {
   position: relative;
-  z-index: 1000;
+  z-index: $z-index-main-nav;
   overflow: hidden;
   background-color: $background-color-base;
 }

@@ -15,7 +15,7 @@ hero
 
 .hero__container {
   position: relative;
-  z-index: 900;
+  z-index: $z-index-hero-container;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -27,7 +27,7 @@ hero
 }
 
 .hero__title {
-  z-index: 200;
+  z-index: $z-index-hero-title;
   position: absolute;
   top: 80px;
   left: 50%;
@@ -66,7 +66,7 @@ hero
 }
 
 .hero__img {
-  z-index: 100;
+  z-index: $z-index-hero-img;
   min-height: 300px;
   max-width: 795px;
 }
@@ -76,7 +76,7 @@ hero
   display: flex;
   flex-direction: column;
   margin-top: -50px;
-  z-index: 200;
+  z-index: $z-index-hero-links-wrapper;
 
   @include screen(md) {
     flex-direction: row;

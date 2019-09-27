@@ -14,7 +14,7 @@ card
     &::before {
       content: '';
       position: absolute;
-      z-index: 1000;
+      z-index: $z-index-card-zigzag;
       bottom: 100%;
       left: 0;
       height: 60px;
