@@ -2,7 +2,7 @@
 @import '../mixins';
 
 /* ==========================================================================
-site-header
+main-nav
 ========================================================================== */
 
 .main-nav {
@@ -47,16 +47,14 @@ site-header
   &:active {
     opacity: 0.3;
   }
-
-  @include screen(lg) {
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
 }
 
-.toggler {
-  padding: 39px 30px;
+.main-nav__logo {
+  padding: 22px 32px;
+}
+
+.main-nav__toggler {
+  padding: 39px 43px;
   display: none;
   cursor: pointer;
   border-top: 0;
@@ -67,7 +65,7 @@ site-header
   background-size: 25px;
 }
 
-.toggler.is-open {
+.main-nav__toggler.is-open {
   background-image: url('../img/svg/icon-menu-cross.svg');
 }
 
@@ -83,7 +81,7 @@ site-header
     display: none;
   }
 
-  .main-nav__link.toggler {
+  .main-nav__toggler {
     float: right;
     display: block;
   }
@@ -92,7 +90,7 @@ site-header
     position: relative;
   }
 
-  .main-nav.responsive .main-nav__link.toggler {
+  .main-nav.responsive .main-nav__toggler {
     position: absolute;
     right: 0;
     top: 0;
@@ -105,7 +103,21 @@ site-header
   }
 }
 
+@include screen(md) {
+  .main-nav__logo {
+    padding: 22px 50px;
+  }
+
+  .main-nav__toggler {
+    padding: 39px 63px;
+  }
+}
+
 @include screen(lg) {
+  .main-header__container {
+    padding: 0 50px;
+  }
+
   .main-nav {
     display: flex;
     flex-direction: row;
@@ -119,15 +131,18 @@ site-header
   }
 
   .main-nav__link {
-    padding: 25px 20px;
+    padding: 30px 20px;
     max-width: 210px;
     border: 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   .main-nav__logo {
     margin-right: auto;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .logo__img {
@@ -135,7 +150,7 @@ site-header
     height: 46px;
   }
 
-  .toggler {
+  .main-nav__toggler {
     display: none;
   }
 }
@@ -143,15 +158,6 @@ site-header
 @include screen(xl) {
   .main-nav__wrapper {
     max-width: 900px;
-  }
-
-  .main-nav__link {
-    padding: 30px 20px;
-  }
-
-  .main-nav__logo {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 
   .logo__img {

@@ -23,9 +23,9 @@ function showHideNav() {
 }
 
 function switchNavIcon() {
-  if (mainNavToggler.className === "toggler main-nav__link") {
+  if (mainNavToggler.className === "toggler main-nav__toggler main-nav__link") {
     mainNavToggler.className += " is-open";
   } else {
-    mainNavToggler.className = "toggler main-nav__link";
+    mainNavToggler.className = "toggler main-nav__toggler main-nav__link";
   }
 }
