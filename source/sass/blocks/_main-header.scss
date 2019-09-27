@@ -8,15 +8,3 @@ main-header
 .main-header {
   background-color: $background-color-base;
 }
-
-@include screen(lg) {
-  .main-header__container {
-
-  }
-}
-
-@include screen(xl) {
-  .main-header__container {
-
-  }
-}
