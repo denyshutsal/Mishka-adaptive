@@ -3,6 +3,8 @@
 
 'use strict';
 
+//https://github.com/ganlanyuan/tiny-slider
+
 let slider = tns({
   container: '.reviews-slider',
   items: 1,
@@ -10,4 +12,5 @@ let slider = tns({
   nav: false,
   controlsPosition: 'bottom',
   controlsText: ['', ''],
+  touch: false,
 });
