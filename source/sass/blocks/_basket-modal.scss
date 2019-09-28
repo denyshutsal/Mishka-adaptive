@@ -148,9 +148,12 @@ basket-modal
   }
 }
 
-.basket-modal__input:checked + label::before,
-.basket-modal__input:focus + label::before {
+.basket-modal__input:checked + label::before {
   border: 2px solid $background-color-4;
+}
+
+.basket-modal__input:focus + label::before {
+  outline: 2px dotted $background-color-4;
 }
 
 .basket-modal__link {
