@@ -1,31 +1,39 @@
-// main-nav-toggler (main-nav-toggler.js)
+// main-nav-toggler
 // ----------------------------------------------------------------------
 
 'use strict';
 
 let mainNavToggler = document.getElementById('mainNavToggler');
 
-mainNavToggler.addEventListener("click", handler1);
+// opening the main nav menu by mouse clicking
+mainNavToggler.addEventListener('click', mainNavHandler);
 
-function handler1() {
+// opening the main nav menu by keyboard clicking
+mainNavToggler.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    mainNavHandler()
+  }
+});
+
+function mainNavHandler() {
   showHideNav();
   switchNavIcon();
 }
 
 function showHideNav() {
-  let mainNavElement = document.getElementById("mainNav");
+  let mainNavElement = document.getElementById('mainNav');
 
-  if (mainNavElement.className === "main-nav") {
-    mainNavElement.className += " responsive";
+  if (mainNavElement.className === 'main-nav') {
+    mainNavElement.className += ' responsive';
   } else {
-    mainNavElement.className = "main-nav";
+    mainNavElement.className = 'main-nav';
   }
 }
 
 function switchNavIcon() {
-  if (mainNavToggler.className === "toggler main-nav__toggler main-nav__link") {
-    mainNavToggler.className += " is-open";
+  if (mainNavToggler.className === 'toggler main-nav__toggler main-nav__link') {
+    mainNavToggler.className += ' is-open';
   } else {
-    mainNavToggler.className = "toggler main-nav__toggler main-nav__link";
+    mainNavToggler.className = 'toggler main-nav__toggler main-nav__link';
   }
 }
