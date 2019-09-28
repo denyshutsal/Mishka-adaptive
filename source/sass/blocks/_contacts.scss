@@ -160,11 +160,18 @@ contacts
   left: 0;
   right: 0;
 
+  iframe {
+    width: 100%;
+    height: 457px;
+  }
+
   @include screen(xl) {
     position: inherit;
-    width: 525px;
-    height: 457px;
     order: 2;
+
+    iframe {
+      width: 525px;
+    }
   }
 }
 
