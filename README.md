@@ -2,7 +2,7 @@
 
 Адаптивная версия сайта "Мишка" для портфолио (все файлы, включая build папку)
 
-GitHub Pages версия (...)
+GitHub Pages версия (https://denyshutsal.github.io/mishka-github-pages/)
 
 В проекте:
 
