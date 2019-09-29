@@ -155,7 +155,8 @@
           </picture>
         </a>
         <div class="main-nav__wrapper clearfix">
-          <a id="mainNavToggler" class="toggler main-nav__toggler main-nav__link" tabindex="0"></a>
+          <a id="mainNavToggler" class="toggler main-nav__toggler main-nav__link" role="button"
+             aria-label="Скрыть или показать меню" tabindex="0"></a>
           <a href="#" class="main-nav__link">Каталог товаров</a>
           <a href="#" class="main-nav__link">Вязание на заказ</a>
           <a href="#" class="main-nav__link">Новые поступления</a>
@@ -177,7 +178,7 @@
       <img class="hero__img" src="img/hero.jpg" srcset="img/hero@2x.jpg 2x" alt="Картинка с вязанными игрушками">
       <h1 class="hero__title">Милые штуки ручной <br> работы для дома</h1>
       <div class="hero__links-wrapper">
-        <a href="#" class="btn hero-link hero-link--1">
+        <a href="#" class="btn hero-link hero-link--1" role="button">
           <h2 class="hero-link__title">Предметы интерьера</h2>
           <span class="hero-link__icon">
             <svg class="icon icon--lamp" width="40" height="62" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +186,7 @@
             </svg>
           </span>
         </a>
-        <a href="#" class="btn hero-link hero-link--2">
+        <a href="#" class="btn hero-link hero-link--2" role="button">
           <h2 class="hero-link__title">Детские игрушки</h2>
           <span class="hero-link__icon">
             <svg class="icon icon--element" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
@@ -242,7 +243,7 @@
       </div>
       <div class="card__footer">
         <p class="card__price">Цена: <span class="card__price-value">990 руб.</span></p>
-        <a href="#" class="btn btn--main card__link">ЗАКАЗАТЬ</a>
+        <a href="#" class="btn btn--main card__link" role="button">ЗАКАЗАТЬ</a>
       </div>
     </div>
   </section>
@@ -314,7 +315,7 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn btn--main about-us__link">Написать</a>
+        <a href="#" class="btn btn--main about-us__link" role="button">Написать</a>
       </div>
     </div>
   </section>
@@ -324,7 +325,7 @@
     <div class="container contacts__container">
       <h3 class="contacts__title">Контакты</h3>
       <address class="contacts__wrapper">
-        <div class="contacts__email">e-mail:<a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></div>
+        <div class="contacts__email">e-mail:<a href="mailto:info@mimimishkashop.ru" aria-label="Наша электронная почта">info@mimimishkashop.ru</a></div>
         <div class="contacts__address">адрес:</div>
         <p>
           г. Санкт-Петербург,<br>
@@ -334,9 +335,10 @@
         </p>
       </address>
       <div class="contacts__map-wrapper">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1569408721797!5m2!1sru!2sua" allowfullscreen="" loading="lazy"></iframe>
+        <h4 class="sr-only">Мы на карте</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1569408721797!5m2!1sru!2sua" allowfullscreen="" title="Мы на карте" loading="lazy"></iframe>
       </div>
-      <button class="btn btn--main contacts__btn" type="button">Напишите нам</button>
+      <button class="btn btn--main contacts__btn" type="button" aria-label="Напишите нам">Напишите нам</button>
     </div>
   </section>
   <!--  /.contacts-->
@@ -395,7 +397,7 @@
       <input type="checkbox" class="basket-modal__input basket-modal__input--3" id="basketModalInput3" name="l-size">
       <label for="basketModalInput3"><span class="sr-only">L size</span></label>
 
-      <button type="submit" class="btn btn--green basket-modal__link">Добавить</button>
+      <button type="submit" class="btn btn--green basket-modal__link" aria-label="Добавить">Добавить</button>
     </form>
   </div>
   <!--  /.basket-modal-->
