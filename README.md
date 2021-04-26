@@ -1,16 +1,13 @@
 # Мишка
 
-Адаптивная версия сайта "Мишка" для портфолио (все файлы, включая build папку)
-
-GitHub Pages версия (https://denyshutsal.github.io/mishka-github-pages/)
+[Демо проекта](https://denyshutsal.github.io/mishka-github-pages/)
 
 В проекте:
 
 - Adaptive layout
-- CSS3, HTML5
 - BEM
-- CSS flexbox
-- Scss
+- Flexbox
+- SCSS
 - Gulp (autoprefixer, css/js concatenation and minification, svg/images optimization, webp, svgsprite)
 - Webp
 - SVG
@@ -18,8 +15,6 @@ GitHub Pages версия (https://denyshutsal.github.io/mishka-github-pages/)
 - Adaptive images (picture + srcset + media queries)
 - Retina images
 - GIT VCS
-
-JetBrains Webstorm IDE
 
 Browserslist:
 - last 1 version
